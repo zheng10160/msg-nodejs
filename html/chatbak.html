@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/css/chat1.css">
+    <link rel="stylesheet" type="text/css" href="/css/message.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/functions.js"></script>
+    <script src="/js/jquery.js"></script>
+      <!-- <script src="/js/rem.js"></script> -->
+    <script src="http://192.168.99.62:3000/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        @media screen and (width:812px){
+            .chatBox-send{
+                bottom:27px;
+            }
+
+        }
+    </style>
+
+<div class="chatContainer big-wrap">
+
+    <div class="chatBox" ref="chatBox">
+        <header class="mui-bar mui-bar-nav head chatBox-head">
+                <!--左侧-->
+                <div class="head-left">
+                    <img src="/img/Nearby_white.png" alt="" style="width:32px;"/>
+                    <h4>对话列表</h4>
+                </div>
+                <!--右侧-->
+                <div class="head-right sousuo">
+                    <div class="box">
+                        <input type="text" id="u_value" placeholder="昵称/手机/邮箱" class="ss-val"/>
+                        <button id="s_btn" class="search">搜索</button>
+
+                       <!--  <div id="show_friends" style="display:block;background:grey;z-index:100;width:100px;height:40px">
+
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- 返回 4545454-->
+                 <a  href="uniwebview://game-over?score="  class="back_to" style="background:url(/img/Btn_Head_Return.png) no-repeat 100% 100% ;background-size:cover;display:block;width:88px;height:40px;z-index: 9999999"></a>
+            </header>
+        <div class="chatBox-info" style="display:flex;justify-content: space-between;">
+            <!-- 好友列表 -->
+            <div class="chatBox-list" id="chat_list" ref="chatBoxlist" style="width:24%">
+
+               
+            </div>
+
+
+
+            <!--搜索框提示-->
+                <!--用户不存在的情况下-->
+            <div class="search-tips none" style="width: 340px;display: none;line-height: 72px">
+                该昵称用户不存在，请重新搜索！
+            </div>
+            
+                <!--用户存在的情况下-->
+            <div class="tip-wrap tip-wrap-cunzai" style="display:none;">
+                <div  class="search-tips cunzai" style="display: flex;justify-content: space-around;">
+                    <h4>提示</h4>
+                    <p>是否将以下用户加入对话列表吗？</p>
+
+                    <div class="show_friends" id="show_friends" style="width: 80%;height: 50%;margin: 0 auto;overflow: hidden;text-align: center;    line-height: 30px;font-size: 16px；color:#3C84A0;">
+                       
+                   </div>
+
+                    <!--  <div class="operate" style="margin-bottom: 5%">
+                        <div class="queren private-chat-btn " data_username=""  data_userid="" data_avatar="" data_sex="">确认</div>
+                        <div class="quxiao">取消</div>
+                    </div> -->
+                </div>
+                
+             </div>
+
+
+
+            <!-- 聊天界面 -->
+            <div class="chatBox-kuang" ref="chatBoxkuang" style="width:76%">
+                <div class="chatBox-content">
+                    <div class="chatBox-content-demo" id="chatBox-content-demo">
+
+
+
+                    </div>
+                </div>
+                <div class="chatBox-send">
+                    <div class="div-textarea" contenteditable="true" style="width:60%"></div>
+                   	<div id="toUser">
+                        <input type="hidden" name="to_username" value="">
+                        <input type="hidden" name="to_userid" value="">
+                        <input type="hidden" name="to_avatar" value="">
+                        <input type="hidden" name="to_sex" value="">
+                        <button id="chat-fasong" class="btn-default-styles">发送
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/iscroll.js"></script>
+<script>
+    // $('.back_to').click(function(){
+    //     window.location.href=""
+    // })
+
+    var uid;
+    var username;
+
+    var info={};//空对象
+
+    var client_id = "<%=client_id%>";//初始化
+    var access_token = "<%=access_token%>";//初始化
+
+    var toUserInfo = "<%=toUserInfo%>";//初始化//对方用户
+
+    console.log(client_id);
+    console.log(access_token);
+    console.log(toUserInfo);
+    // 判断页面资源是否加载完毕  dom元素和img资源
+    document.onreadystatechange = function () {
+       if(document.readyState=="complete") {
+
+       }else{
+
+            $('.big-wrap').css('background',"#090A1A");
+
+       }
+    }
+
+</script>
+<script type="text/javascript" src="/js/core.js"></script>
+<script type="text/javascript" src="/js/chat_demo.js"></script>
+</body>
+</html>
+
+
+
+ 

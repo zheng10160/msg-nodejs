@@ -1,0 +1,14 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "description": "一个简单聊天室实现，基于nodejs，socket.io，php，redis等等。",
+  "main": "server.js",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  }
+}

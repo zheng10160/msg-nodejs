@@ -1,0 +1,232 @@
+img,a,p,span,i,ul,li{
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select: none;
+}
+.ui-page-login,
+body {
+	width: 100%;
+	height:100%;
+	overflow: hidden
+	margin: 0px;
+	padding: 0px;
+	background:#090A1A;
+	background-repeat: no-repeat;
+	/*background-position: 0px 0px;*/
+	background-size: 100% 100%;
+	background-size: cover;
+	 /*background-repeat: repeat-y;*/
+}
+.big-wrap{
+	/*position: fixed;*/
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: url(../img/login.png) no-repeat 100% 100%;
+	background-size: cover;
+}
+/*登陆头部*/
+.mui-bar-nav {
+    top: 0;
+    -webkit-box-shadow:none;
+    box-shadow: 0 1px 6px #1C2739;
+    background: #21263B;
+    opacity:0.8;
+}
+.mui-bar-nav h1{
+	color:#fff;
+	font-size: 20px;
+  	font-weight: 600;
+}
+.login-form{
+	/*height:252px;*/
+	width:48%;
+	margin:0 auto;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top:70px;
+	margin-bottom: 27px;	
+	background: none;
+}
+.login-form .user{
+	width:100%;
+	border-radius:4px;
+	
+}
+.login-form .user input{
+	outline: none;
+	border:0;
+	width:100%;
+	height:100%;
+	display: block;
+	color:#cccccc !important;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	
+}
+.big-wrap{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: url(../img/login.png) no-repeat 100% 100%;
+	background-size: cover;
+	overflow: auto;
+	background-position-x: 0;
+    background-position-y: 0;
+}
+.login-form{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin: 0;
+	padding:0;
+	overflow: auto;
+	width:100%;
+}
+/*头部*/
+.big-wrap header{
+	background: url(../img/Bars_SubPage.png) no-repeat 100% 100%;
+	background-size: cover;
+	height:56px;
+	border: 0;
+	box-shadow:none;
+	background-position-x: 0;
+    background-position-y: 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.mui-bar{
+	padding: 0;
+}
+.head-left{
+	position: fixed;
+	top:0;
+	left:0;	
+	align-self: flex-start;
+	width:120px;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	height:48px;
+	margin-right:37%;
+}
+.head-left h4{
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.head-right {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-left:17%;
+
+}
+.head-right .box{
+	width:232px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+.head-right .box input{
+	width:160px;
+	height:28px; 
+	background:rgba(28,45,76,1);
+	outline: none;
+	font-size:12px;
+	color:rgba(204,204,204,1);
+	line-height:17px;
+	border: 0;
+	padding-left: 10px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.head-right .box button.search{
+	outline: none;
+	border:0;
+	height:28px;
+	width:64px;
+	background:#253678;
+	border-radius: 4px;
+	align-self: flex-start;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+	line-height: 28px;
+}
+
+/*content区域*/
+.login-form  .content{
+	flex: 1;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top:56px;
+
+	display:flex;
+	justify-content: space-between;
+}
+.login-form  .content .content-left{
+	width:24%;
+	height:100%;
+	overflow: auto;
+	
+}
+.login-form  .content .content-left .manu{
+	width: 100%;
+	height:auto;
+	padding-top:10px;
+	box-sizing: border-box;
+
+}
+.manu .chat-list-people{
+	width:100%px;
+	height:48px;
+	display:flex;
+	align-items:center;
+}
+.manu .chat-list-people div img{
+	width: 32px;
+	height: 32px;
+}
+.manu .chat-list-people .chat-name{
+	flex: 1;
+	height:100%;
+}
+
+.manu .chat-list-people .chat-name>p{
+	font-size: 14px;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-stretch: normal;
+	  letter-spacing: normal;
+	  text-align: left;
+	  color: #ffffff;
+}
+.active{
+    background: #125270;
+}
